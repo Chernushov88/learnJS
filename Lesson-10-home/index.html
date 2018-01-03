@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8"/>
+	<title>Title</title>
+	<script type="text/javascript">
+		function startTime(){
+			var tm=new Date();
+			var h=tm.getHours();
+			var m=tm.getMinutes();
+			var s=tm.getSeconds();
+			m=checkTime(m);
+			s=checkTime(s);
+			document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+			t=setTimeout('startTime()',500);
+		}
+		function checkTime(i){
+			if (i<10)
+			{
+			i="0" + i;
+			}
+			return i;
+		}
+	</script>
+	</head>
+	<body  onload="startTime()">
+		<H1 OnClick="alert('Вы кликнули мышью')">Заголовок страницы</h1>
+		
+		<a href="JavaScript: void window.open()">Ссылка</a>
+		<p id="txt"> </p>
+		<p>
+		Контент ...
+		</p>
+		<h1 id="cl"></h1>
+		<script src="script.js"></script>
+		<hr />
+	</body>
+</html>
